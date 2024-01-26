@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1706303550
+icon.svg::CompressedTexture2D::5383214281242614756::1706295859::1706295863::1::::<><>::
+::res://frames/::1706299297
+Sprite-0001.png::CompressedTexture2D::5680062492814011506::1706299234::1706299297::1::::<><>::
+Sprite-0002.png::CompressedTexture2D::4527401500229769529::1706299234::1706299297::1::::<><>::
+::res://scenes/::1706303835
+ArrowNote.tscn::PackedScene::2825524001308947033::1706304337::0::1::::<><>::uid://cm6p2gdgqdk6u::::res://frames/Sprite-0001.png<>uid://b5rdv2jtwak14::::res://frames/Sprite-0002.png<>res://scripts/arrow_notes.gd
+ArrowSpawner.tscn::PackedScene::6449032425109805379::1706303835::0::1::::<><>::res://scripts/ArrowSpawner.gd
+game.tscn::PackedScene::2820914568127298713::1706303779::0::1::::<><>::res://scripts/game.gd<>uid://bgix75oefke2t::::res://scenes/ArrowNote.tscn<>uid://cg6wutrk3vbhd::::res://scenes/HUD.tscn<>uid://cx47ve3iv3u3l::::res://scenes/ArrowSpawner.tscn<>res://scripts/ArrowSpawner.gd
+HUD.tscn::PackedScene::5259342654007135837::1706303056::0::1::::<><>::
+::res://scripts/::1706303777
+arrow_notes.gd::GDScript::-1::1706302867::0::1::::<>AnimatedSprite2D<>::
+game.gd::GDScript::-1::1706298553::0::1::::<>Node2D<>::
+hud.gd::GDScript::-1::1706303001::0::1::::<>CanvasLayer<>::
+ArrowSpawner.gd::GDScript::-1::1706303777::0::1::::<>Marker2D<>::

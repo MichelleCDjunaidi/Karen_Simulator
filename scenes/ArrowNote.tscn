@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgix75oefke2t"]
+
+[ext_resource type="Texture2D" uid="uid://cm6p2gdgqdk6u" path="res://frames/Sprite-0001.png" id="1_ip0al"]
+[ext_resource type="Texture2D" uid="uid://b5rdv2jtwak14" path="res://frames/Sprite-0002.png" id="2_0wvbf"]
+[ext_resource type="Script" path="res://scripts/ArrowNote.gd" id="3_cwpne"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eeiol"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ip0al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0wvbf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3m5t"]
+size = Vector2(5, 9)
+
+[node name="ArrowNote" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_eeiol")
+frame = 1
+frame_progress = 0.689517
+script = ExtResource("3_cwpne")
+
+[node name="GoodArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea"]
+shape = SubResource("RectangleShape2D_d3m5t")
+
+[connection signal="area_entered" from="GoodArea" to="." method="_on_GoodArea_area_entered"]
