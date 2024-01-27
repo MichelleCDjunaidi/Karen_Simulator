@@ -7,6 +7,9 @@
 script = ExtResource("1_5ei3i")
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="SpawnPositioner" type="Marker2D" parent="."]
 script = ExtResource("2_8b88j")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

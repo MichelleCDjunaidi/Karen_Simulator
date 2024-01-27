@@ -19,6 +19,7 @@ position = Vector2(158, 23)
 script = ExtResource("4_a0eba")
 
 [node name="ArrowSpawner" parent="." instance=ExtResource("4_1cqob")]
+position = Vector2(155, 145)
 
 [node name="ArrowUpButton" parent="." instance=ExtResource("6_afu41")]
 position = Vector2(157, 21)

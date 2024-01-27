@@ -5,6 +5,8 @@ export_presets.cfg
 editor_layout.cfg
 project_metadata.cfg
 script_editor_cache.cfg
+.godot/editor/script_editor_cache.cfg
+.godot/editor/editor_layout.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -12,5 +14,4 @@ script_editor_cache.cfg
 # Mono-specific ignores
 .mono/
 data_*/
-.godot/editor/script_editor_cache.cfg
-.godot/editor/editor_layout.cfg
+

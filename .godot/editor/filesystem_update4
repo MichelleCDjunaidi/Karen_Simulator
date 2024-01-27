@@ -7,3 +7,4 @@ res://scripts/ArrowButton.gd
 res://scenes/ArrowButton.tscn
 res://spawner.gd
 res://spawner.tscn
+res://scripts/ArrowSpawner.gd
