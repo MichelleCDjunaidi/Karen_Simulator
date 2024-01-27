@@ -1,10 +1,5 @@
-res://scenes/ArrowNote.tscn
-res://scripts/ArrowNote.gd
 res://scenes/game.tscn
 res://scenes/HUD.tscn
 res://scenes/ArrowSpawner.tscn
-res://scripts/ArrowButton.gd
 res://scenes/ArrowButton.tscn
-res://spawner.gd
-res://spawner.tscn
-res://scripts/ArrowSpawner.gd
+res://frames/orange_arrows.tres

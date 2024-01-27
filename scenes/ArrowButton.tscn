@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0fvwsaa0ldkw"]
 
-[ext_resource type="Texture2D" uid="uid://cm6p2gdgqdk6u" path="res://frames/Sprite-0001.png" id="1_ka8la"]
-[ext_resource type="Texture2D" uid="uid://b5rdv2jtwak14" path="res://frames/Sprite-0002.png" id="2_vqidy"]
+[ext_resource type="Texture2D" uid="uid://bex1mf5tvp50i" path="res://frames/arrow-1.png" id="1_jmpgi"]
+[ext_resource type="Texture2D" uid="uid://cq43s0qjdtd25" path="res://frames/arrow-2.png" id="2_pwjao"]
 [ext_resource type="Script" path="res://scripts/ArrowButton.gd" id="3_vevw5"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_s0gaw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_umpa8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ka8la")
+"texture": ExtResource("1_jmpgi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vqidy")
+"texture": ExtResource("2_pwjao")
 }],
 "loop": true,
 "name": &"default",
@@ -19,5 +19,5 @@ animations = [{
 }]
 
 [node name="ArrowLeftButton" type="AnimatedSprite2D"]
-sprite_frames = SubResource("SpriteFrames_s0gaw")
+sprite_frames = SubResource("SpriteFrames_umpa8")
 script = ExtResource("3_vevw5")

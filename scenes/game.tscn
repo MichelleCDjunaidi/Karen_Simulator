@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bggqbyyq5scir"]
+[gd_scene load_steps=10 format=3 uid="uid://bggqbyyq5scir"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hq0dr"]
 [ext_resource type="PackedScene" uid="uid://bgix75oefke2t" path="res://scenes/ArrowNote.tscn" id="2_q5ynw"]
@@ -6,6 +6,22 @@
 [ext_resource type="PackedScene" uid="uid://cx47ve3iv3u3l" path="res://scenes/ArrowSpawner.tscn" id="4_1cqob"]
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="4_a0eba"]
 [ext_resource type="PackedScene" uid="uid://b0fvwsaa0ldkw" path="res://scenes/ArrowButton.tscn" id="6_afu41"]
+[ext_resource type="Texture2D" uid="uid://bex1mf5tvp50i" path="res://frames/arrow-1.png" id="7_qpy8y"]
+[ext_resource type="Texture2D" uid="uid://cq43s0qjdtd25" path="res://frames/arrow-2.png" id="8_r6opf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gy80t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qpy8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r6opf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hq0dr")
@@ -18,9 +34,10 @@ position = Vector2(158, 23)
 [node name="HUD" parent="." instance=ExtResource("3_fgj27")]
 script = ExtResource("4_a0eba")
 
-[node name="ArrowSpawner" parent="." instance=ExtResource("4_1cqob")]
-position = Vector2(155, 145)
-
 [node name="ArrowUpButton" parent="." instance=ExtResource("6_afu41")]
-position = Vector2(157, 21)
+position = Vector2(468, 139)
+sprite_frames = SubResource("SpriteFrames_gy80t")
 input = "up"
+
+[node name="ArrowSpawner" parent="." instance=ExtResource("4_1cqob")]
+position = Vector2(1, 4)
