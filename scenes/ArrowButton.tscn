@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0fvwsaa0ldkw"]
+
+[ext_resource type="Texture2D" uid="uid://cm6p2gdgqdk6u" path="res://frames/Sprite-0001.png" id="1_ka8la"]
+[ext_resource type="Texture2D" uid="uid://b5rdv2jtwak14" path="res://frames/Sprite-0002.png" id="2_vqidy"]
+[ext_resource type="Script" path="res://scripts/ArrowButton.gd" id="3_vevw5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s0gaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ka8la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vqidy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ArrowLeftButton" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_s0gaw")
+script = ExtResource("3_vevw5")

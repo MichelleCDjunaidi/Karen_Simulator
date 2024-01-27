@@ -1,21 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://bggqbyyq5scir"]
+[gd_scene load_steps=7 format=3 uid="uid://bggqbyyq5scir"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hq0dr"]
 [ext_resource type="PackedScene" uid="uid://bgix75oefke2t" path="res://scenes/ArrowNote.tscn" id="2_q5ynw"]
 [ext_resource type="PackedScene" uid="uid://cg6wutrk3vbhd" path="res://scenes/HUD.tscn" id="3_fgj27"]
 [ext_resource type="PackedScene" uid="uid://cx47ve3iv3u3l" path="res://scenes/ArrowSpawner.tscn" id="4_1cqob"]
-[ext_resource type="Script" path="res://scripts/ArrowSpawner.gd" id="5_8fvwp"]
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="4_a0eba"]
+[ext_resource type="PackedScene" uid="uid://b0fvwsaa0ldkw" path="res://scenes/ArrowButton.tscn" id="6_afu41"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hq0dr")
 
 [node name="background_placeholder" type="Sprite2D" parent="."]
 
-[node name="ArrowUp" parent="." instance=ExtResource("2_q5ynw")]
-
-[node name="ArrowDown" parent="." instance=ExtResource("2_q5ynw")]
+[node name="ArrowInstance" parent="." instance=ExtResource("2_q5ynw")]
+position = Vector2(158, 23)
 
 [node name="HUD" parent="." instance=ExtResource("3_fgj27")]
+script = ExtResource("4_a0eba")
 
 [node name="ArrowSpawner" parent="." instance=ExtResource("4_1cqob")]
-script = ExtResource("5_8fvwp")
+
+[node name="ArrowUpButton" parent="." instance=ExtResource("6_afu41")]
+position = Vector2(157, 21)
+input = "up"

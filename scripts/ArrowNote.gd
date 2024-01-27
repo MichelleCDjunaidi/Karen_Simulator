@@ -13,10 +13,8 @@ func _ready():
 func _process(delta):
 	position += Vector2.UP * speed * delta #Moves pipe to the up at a constant speed
 #	crudest way to do it: check if position
-	if (position.y < -1500):
+	if (position.y < 0):
 # destroying 
 		queue_free()
 	pass
 
-func _on_GoodArea_area_entered(area):
-	HUDNode.incrementScore(1)

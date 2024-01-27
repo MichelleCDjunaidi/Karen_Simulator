@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgix75oefke2t"]
+[gd_scene load_steps=7 format=3 uid="uid://bgix75oefke2t"]
 
 [ext_resource type="Texture2D" uid="uid://cm6p2gdgqdk6u" path="res://frames/Sprite-0001.png" id="1_ip0al"]
 [ext_resource type="Texture2D" uid="uid://b5rdv2jtwak14" path="res://frames/Sprite-0002.png" id="2_0wvbf"]
@@ -21,6 +21,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3m5t"]
 size = Vector2(5, 9)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13txc"]
+size = Vector2(5, 4.5)
+
 [node name="ArrowNote" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_eeiol")
 frame = 1
@@ -32,4 +35,10 @@ script = ExtResource("3_cwpne")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea"]
 shape = SubResource("RectangleShape2D_d3m5t")
 
+[node name="PerfectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectArea"]
+shape = SubResource("RectangleShape2D_13txc")
+
 [connection signal="area_entered" from="GoodArea" to="." method="_on_GoodArea_area_entered"]
+[connection signal="area_entered" from="PerfectArea" to="." method="_on_PerfectArea_area_entered"]
