@@ -12,3 +12,5 @@ script_editor_cache.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+.godot/editor/script_editor_cache.cfg
+.godot/editor/editor_layout.cfg
