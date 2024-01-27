@@ -2,6 +2,9 @@
 .import/
 export.cfg
 export_presets.cfg
+editor_layout.cfg
+project_metadata.cfg
+script_editor_cache.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
