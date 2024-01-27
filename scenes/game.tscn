@@ -29,13 +29,13 @@ script = ExtResource("1_hq0dr")
 [node name="background_placeholder" type="Sprite2D" parent="."]
 
 [node name="ArrowInstance" parent="." instance=ExtResource("2_q5ynw")]
-position = Vector2(158, 23)
+position = Vector2(0, 1)
 
 [node name="HUD" parent="." instance=ExtResource("3_fgj27")]
 script = ExtResource("4_a0eba")
 
 [node name="ArrowUpButton" parent="." instance=ExtResource("6_afu41")]
-position = Vector2(468, 139)
+position = Vector2(500, 139)
 sprite_frames = SubResource("SpriteFrames_gy80t")
 input = "up"
 

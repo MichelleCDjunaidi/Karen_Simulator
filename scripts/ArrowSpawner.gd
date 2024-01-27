@@ -17,7 +17,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 	var arrow = arrow_path.instantiate()
-	arrow.position = Vector2(500,500)
+	arrow.position = Vector2(500,1080)
 	self.add_child(arrow)
 	$Timer.wait_time = wait_times[randi() % 4]
 	print($Timer.wait_time)
