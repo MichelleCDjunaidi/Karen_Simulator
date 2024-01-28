@@ -1,16 +1,21 @@
-[gd_scene load_steps=42 format=3 uid="uid://bggqbyyq5scir"]
+[gd_scene load_steps=50 format=3 uid="uid://bggqbyyq5scir"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hq0dr"]
 [ext_resource type="PackedScene" uid="uid://bgix75oefke2t" path="res://scenes/ArrowNote.tscn" id="2_q5ynw"]
 [ext_resource type="PackedScene" uid="uid://cg6wutrk3vbhd" path="res://scenes/HUD.tscn" id="3_fgj27"]
 [ext_resource type="PackedScene" uid="uid://cx47ve3iv3u3l" path="res://scenes/ArrowSpawner.tscn" id="4_1cqob"]
-[ext_resource type="Script" path="res://scripts/HUD.gd" id="4_a0eba"]
+[ext_resource type="Texture2D" uid="uid://dcyfgrxhtikvc" path="res://frames/arrow-left1.png" id="6_17tpb"]
 [ext_resource type="PackedScene" uid="uid://b0fvwsaa0ldkw" path="res://scenes/ArrowButton.tscn" id="6_afu41"]
+[ext_resource type="Texture2D" uid="uid://chxknkpud8jsk" path="res://frames/arrow-left2.png" id="7_fydoq"]
 [ext_resource type="Texture2D" uid="uid://bex1mf5tvp50i" path="res://frames/arrow-1.png" id="7_qpy8y"]
+[ext_resource type="Texture2D" uid="uid://ctlcwnr4nurqf" path="res://frames/arrow-down1.png" id="8_igebc"]
 [ext_resource type="Texture2D" uid="uid://cq43s0qjdtd25" path="res://frames/arrow-2.png" id="8_r6opf"]
 [ext_resource type="Texture2D" uid="uid://cobemqcuv171i" path="res://frames/Worker1.png" id="9_onig5"]
+[ext_resource type="Texture2D" uid="uid://u2iud8selwrj" path="res://frames/arrow-down2.png" id="9_yavwa"]
 [ext_resource type="Texture2D" uid="uid://ca7uqjmve88ck" path="res://frames/Worker2.png" id="10_mdqoc"]
+[ext_resource type="Texture2D" uid="uid://bkjqvoxif2yt1" path="res://frames/arrow-right1.png" id="10_okki3"]
 [ext_resource type="Texture2D" uid="uid://c3w70hqj8si17" path="res://frames/Worker3.png" id="11_cfktx"]
+[ext_resource type="Texture2D" uid="uid://be2hvds5nuvmx" path="res://frames/arrow-right2.png" id="11_vbvxe"]
 [ext_resource type="Texture2D" uid="uid://b6j8th0qv3cs0" path="res://frames/Worker4.png" id="12_l2618"]
 [ext_resource type="Texture2D" uid="uid://d0aqp7tkj5xxk" path="res://frames/Worker5.png" id="13_pjxt4"]
 [ext_resource type="Texture2D" uid="uid://k0u7con6dqns" path="res://frames/WorkerGhost.png" id="13_vqyy2"]
@@ -25,6 +30,20 @@
 [ext_resource type="AudioStream" uid="uid://cksy7mqphbgip" path="res://audio/worker_defeated.wav" id="23_okxjj"]
 [ext_resource type="AudioStream" uid="uid://b7wc3yqvh044e" path="res://audio/high_screech.wav" id="23_xr6wa"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5g34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_17tpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fydoq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_gy80t"]
 animations = [{
 "frames": [{
@@ -33,6 +52,34 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_r6opf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pk85"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_igebc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yavwa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3swvm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_okki3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vbvxe")
 }],
 "loop": true,
 "name": &"default",
@@ -206,7 +253,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_we6wg"]
-random_pitch = 2.13
+random_pitch = 1.9
 streams_count = 1
 stream_0/stream = ExtResource("23_xr6wa")
 stream_0/weight = 1.0
@@ -689,14 +736,29 @@ position = Vector2(0, 1)
 monitoring = false
 monitorable = false
 
-[node name="HUD" parent="." instance=ExtResource("3_fgj27")]
-script = ExtResource("4_a0eba")
+[node name="ArrowLeftButton" parent="." instance=ExtResource("6_afu41")]
+position = Vector2(300, 139)
+sprite_frames = SubResource("SpriteFrames_x5g34")
+input = "left"
+action = "Complain"
 
 [node name="ArrowUpButton" parent="." instance=ExtResource("6_afu41")]
 position = Vector2(500, 139)
 sprite_frames = SubResource("SpriteFrames_gy80t")
 input = "up"
 action = "Mid"
+
+[node name="ArrowDownButton" parent="." instance=ExtResource("6_afu41")]
+position = Vector2(700, 139)
+sprite_frames = SubResource("SpriteFrames_1pk85")
+input = "down"
+action = "Mid"
+
+[node name="ArrowRightButton" parent="." instance=ExtResource("6_afu41")]
+position = Vector2(900, 139)
+sprite_frames = SubResource("SpriteFrames_3swvm")
+input = "left"
+action = "Complain"
 
 [node name="ArrowSpawner" parent="." instance=ExtResource("4_1cqob")]
 position = Vector2(1, 4)
@@ -741,6 +803,8 @@ texture = ExtResource("20_1acb3")
 position = Vector2(-1460.87, -97.5772)
 rotation = 0.00304652
 texture = ExtResource("18_3c4v7")
+
+[node name="HUD" parent="." instance=ExtResource("3_fgj27")]
 
 [node name="AnimationPlayer_Karen" type="AnimationPlayer" parent="."]
 libraries = {

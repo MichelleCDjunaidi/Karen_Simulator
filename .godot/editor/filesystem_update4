@@ -5,3 +5,4 @@ res://scenes/HUD.tscn
 res://scenes/ArrowNote.tscn
 res://scenes/ArrowSpawner.tscn
 res://scripts/game.gd
+res://scripts/HUD.gd

@@ -19,6 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pyeam"]
+size = Vector2(20, 39)
 
 [node name="ArrowLeftButton" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_umpa8")
@@ -27,6 +28,7 @@ script = ExtResource("3_vevw5")
 [node name="PerfectArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectArea"]
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_pyeam")
 
 [node name="GoodArea1" type="Area2D" parent="."]
@@ -34,6 +36,7 @@ position = Vector2(0, 23)
 scale = Vector2(1, 0.448897)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea1"]
+position = Vector2(0, 35.609)
 scale = Vector2(1, 2.68)
 shape = SubResource("RectangleShape2D_pyeam")
 
@@ -42,6 +45,7 @@ position = Vector2(0, -23)
 scale = Vector2(1, 0.448897)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea2"]
+position = Vector2(0, -56.8059)
 scale = Vector2(1, 2.68)
 shape = SubResource("RectangleShape2D_pyeam")
 

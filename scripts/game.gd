@@ -1,11 +1,9 @@
 extends Node2D
-
 var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -13,6 +11,8 @@ func _process(delta):
 
 func increment_score(by):
 	score += by
+#HUD is a child of Game, so use this convention instead of the other one
+	$HUD.updateText(score)
 	print(score)
 # ------------- placeholder: to change state of worker along with score -----------------------
 	if score < 5:
