@@ -5,6 +5,7 @@ var okay = false
 var current_note = null
 
 @export var input = ""
+@export var action = ""
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,14 +20,14 @@ func _unhandled_input(event):
 				if perfect:
 					get_parent().increment_score(3)
 					print("perfect, " , current_note)
-					current_note.hit()
+					current_note.hit(action)
 				elif good:
 					get_parent().increment_score(2)
 					print("good, " , current_note)
-					current_note.hit()
+					current_note.hit(action)
 				elif okay:
 					get_parent().increment_score(1)
-					current_note.hit()
+					current_note.hit(action)
 				_reset()
 			else:
 				get_parent().increment_score(0)

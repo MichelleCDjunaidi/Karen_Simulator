@@ -29,13 +29,25 @@ script = ExtResource("3_vevw5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectArea"]
 shape = SubResource("RectangleShape2D_pyeam")
 
-[node name="GoodArea" type="Area2D" parent="."]
+[node name="GoodArea1" type="Area2D" parent="."]
+position = Vector2(0, 23)
+scale = Vector2(1, 0.448897)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea1"]
+scale = Vector2(1, 2.68)
+shape = SubResource("RectangleShape2D_pyeam")
+
+[node name="GoodArea2" type="Area2D" parent="."]
+position = Vector2(0, -23)
+scale = Vector2(1, 0.448897)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea2"]
 scale = Vector2(1, 2.68)
 shape = SubResource("RectangleShape2D_pyeam")
 
 [connection signal="area_entered" from="PerfectArea" to="." method="_on_PerfectArea_area_entered"]
 [connection signal="area_exited" from="PerfectArea" to="." method="_on_PerfectArea_area_exited"]
-[connection signal="area_entered" from="GoodArea" to="." method="_on_GoodArea_area_entered"]
-[connection signal="area_exited" from="GoodArea" to="." method="_on_GoodArea_area_exited"]
+[connection signal="area_entered" from="GoodArea1" to="." method="_on_GoodArea_area_entered"]
+[connection signal="area_exited" from="GoodArea1" to="." method="_on_GoodArea_area_exited"]
+[connection signal="area_entered" from="GoodArea2" to="." method="_on_GoodArea_area_entered"]
+[connection signal="area_exited" from="GoodArea2" to="." method="_on_GoodArea_area_exited"]

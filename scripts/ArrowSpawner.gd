@@ -5,8 +5,8 @@ var arrow_path = preload("res://scenes/ArrowNote.tscn")
 # Called when the node enters the scene tree for the first time
 var wait_times = [2,3,4,5,6]
 func _ready():
-	$Timer.wait_time = wait_times[randi() % 4]
-	print($Timer.wait_time)
+	#$Timer.wait_time = wait_times[randi() % 4]
+	#print($Timer.wait_time)
 	$Timer.start()
 
 

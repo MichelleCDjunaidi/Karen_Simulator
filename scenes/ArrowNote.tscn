@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bgix75oefke2t"]
 
 [ext_resource type="Texture2D" uid="uid://bex1mf5tvp50i" path="res://frames/arrow-1.png" id="1_hhd8d"]
-[ext_resource type="Texture2D" uid="uid://bddqli8lyxeui" path="res://frames/hand.png" id="3_1acme"]
 [ext_resource type="Script" path="res://scripts/ArrowNote.gd" id="3_cwpne"]
+[ext_resource type="Texture2D" uid="uid://b7d4wiejse1tt" path="res://frames/Karen4.png" id="3_twkof"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uwbcj"]
 animations = [{
@@ -21,7 +21,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_1acme")
+"texture": ExtResource("3_twkof")
 }],
 "loop": true,
 "name": &"default",

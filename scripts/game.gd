@@ -14,3 +14,19 @@ func _process(delta):
 func increment_score(by):
 	score += by
 	print(score)
+# ------------- placeholder: to change state of worker along with score -----------------------
+	if score < 5:
+		$Worker_Parent/Worker.frame = 0
+	elif score < 10:
+		$Worker_Parent/Worker.frame = 1
+	elif score < 15:
+		$Worker_Parent/Worker.frame = 2
+	elif score < 20:
+		$Worker_Parent/Worker.frame = 3
+		$AnimationPlayer_Worker.play("GhostFloaty")
+	else:
+		game_end()
+		
+func game_end():
+	$AnimationPlayer_Endgame.play("GameEnd")	
+		
