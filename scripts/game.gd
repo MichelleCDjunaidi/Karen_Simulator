@@ -19,15 +19,17 @@ func increment_score(by):
 		$Worker_Parent/Worker.frame = 0
 	elif score < 10:
 		$Worker_Parent/Worker.frame = 1
-	elif score < 15:
-		$Worker_Parent/Worker.frame = 2
 	elif score < 20:
+		$Worker_Parent/Worker.frame = 2
+	elif score < 30:
 		$Worker_Parent/Worker.frame = 3
 		$AnimationPlayer_Worker.play("GhostFloaty")
 	else:
 		game_end()
+		$HUD.gameOver(score)
 		
 func game_end():
 	$AudioPlayer_Win.play()
 	$AnimationPlayer_Endgame.play("GameEnd")	
+
 		

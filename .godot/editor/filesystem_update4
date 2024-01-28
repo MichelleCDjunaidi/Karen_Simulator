@@ -7,3 +7,8 @@ res://scenes/ArrowSpawner.tscn
 res://scripts/game.gd
 res://scripts/HUD.gd
 res://scripts/ArrowSpawner.gd
+res://scenes/ArrowNoteDown.tscn
+res://scenes/ArrowNoteLeft.tscn
+res://scenes/ArrowNoteRight.tscn
+res://scenes/ArrowNoteUp.tscn
+res://scripts/ArrowNote.gd

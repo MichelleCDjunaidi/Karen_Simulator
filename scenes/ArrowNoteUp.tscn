@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbby8rg5g6y4h"]
+
+[ext_resource type="Script" path="res://scripts/ArrowNote.gd" id="1_cjkgy"]
+[ext_resource type="Texture2D" uid="uid://bex1mf5tvp50i" path="res://frames/arrow-1.png" id="2_2intj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uwbcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2intj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_maptk"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_cjkgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uwbcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.56332, 1.56332)
+shape = SubResource("RectangleShape2D_maptk")

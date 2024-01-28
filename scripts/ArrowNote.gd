@@ -23,5 +23,7 @@ func _process(delta):
 	
 func hit(action):
 	$AnimatedSprite2D.visible = false
+	Animator.play("RESET")
 	Animator.play(action)
+	
 

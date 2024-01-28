@@ -1,6 +1,7 @@
-[gd_scene load_steps=50 format=3 uid="uid://bggqbyyq5scir"]
+[gd_scene load_steps=52 format=3 uid="uid://bggqbyyq5scir"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hq0dr"]
+[ext_resource type="Texture2D" uid="uid://duwnskgknj21b" path="res://frames/unnamed (1).jpg" id="2_87c57"]
 [ext_resource type="PackedScene" uid="uid://bgix75oefke2t" path="res://scenes/ArrowNote.tscn" id="2_q5ynw"]
 [ext_resource type="PackedScene" uid="uid://cg6wutrk3vbhd" path="res://scenes/HUD.tscn" id="3_fgj27"]
 [ext_resource type="PackedScene" uid="uid://cx47ve3iv3u3l" path="res://scenes/ArrowSpawner.tscn" id="4_1cqob"]
@@ -27,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://ba5c54bcf3jqy" path="res://frames/Karen2.png" id="19_q5vme"]
 [ext_resource type="Texture2D" uid="uid://cqhi2nk5dh0pi" path="res://frames/Karen3.png" id="20_1acb3"]
 [ext_resource type="AudioStream" uid="uid://dkbehhdme4lue" path="res://audio/rant_1.wav" id="22_ov4v7"]
+[ext_resource type="Texture2D" uid="uid://bmoiu0o2i60xt" path="res://frames/counter.png" id="23_mfka4"]
 [ext_resource type="AudioStream" uid="uid://cksy7mqphbgip" path="res://audio/worker_defeated.wav" id="23_okxjj"]
 [ext_resource type="AudioStream" uid="uid://b7wc3yqvh044e" path="res://audio/high_screech.wav" id="23_xr6wa"]
 
@@ -492,7 +494,7 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1460.87, -97.5772)]
+"values": [Vector2(0, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -730,6 +732,13 @@ _data = {
 script = ExtResource("1_hq0dr")
 
 [node name="background_placeholder" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_87c57")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(960, 381)
+scale = Vector2(1, 1.29444)
+texture = ExtResource("23_mfka4")
 
 [node name="ArrowInstance" parent="." instance=ExtResource("2_q5ynw")]
 position = Vector2(0, 1)
@@ -800,7 +809,6 @@ position = Vector2(0, -158.911)
 texture = ExtResource("20_1acb3")
 
 [node name="Mid" type="Sprite2D" parent="Karen"]
-position = Vector2(-1460.87, -97.5772)
 rotation = 0.00304652
 texture = ExtResource("18_3c4v7")
 

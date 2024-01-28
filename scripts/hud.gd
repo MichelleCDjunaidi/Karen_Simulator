@@ -13,7 +13,7 @@ func _process(delta):
 func updateText(num):
 	$Label.text = "SCORE: " + str(num)
 
-func gameOver():
+func gameOver(score):
 	$Label.visible = false
 	$Label2.visible = true
 	$Label2.text = "You got kicked out! Final score: " + str(score)
