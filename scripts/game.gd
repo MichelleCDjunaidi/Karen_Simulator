@@ -28,5 +28,6 @@ func increment_score(by):
 		game_end()
 		
 func game_end():
+	$AudioPlayer_Win.play()
 	$AnimationPlayer_Endgame.play("GameEnd")	
 		

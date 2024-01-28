@@ -1,9 +1,7 @@
+res://scenes/ArrowButton.tscn
+res://scripts/ArrowButton.gd
 res://scenes/game.tscn
 res://scenes/HUD.tscn
-res://scenes/ArrowButton.tscn
 res://scenes/ArrowNote.tscn
-res://scripts/ArrowButton.gd
-res://scripts/game.gd
-res://scripts/ArrowNote.gd
 res://scenes/ArrowSpawner.tscn
-res://scripts/ArrowSpawner.gd
+res://scripts/game.gd
