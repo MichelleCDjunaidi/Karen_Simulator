@@ -757,7 +757,7 @@ action = "Mid"
 [node name="ArrowRightButton" parent="." instance=ExtResource("6_afu41")]
 position = Vector2(900, 139)
 sprite_frames = SubResource("SpriteFrames_3swvm")
-input = "left"
+input = "right"
 action = "Complain"
 
 [node name="ArrowSpawner" parent="." instance=ExtResource("4_1cqob")]
