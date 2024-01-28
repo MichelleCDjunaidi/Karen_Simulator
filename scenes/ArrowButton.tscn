@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0fvwsaa0ldkw"]
+[gd_scene load_steps=6 format=3 uid="uid://b0fvwsaa0ldkw"]
 
 [ext_resource type="Texture2D" uid="uid://bex1mf5tvp50i" path="res://frames/arrow-1.png" id="1_jmpgi"]
 [ext_resource type="Texture2D" uid="uid://cq43s0qjdtd25" path="res://frames/arrow-2.png" id="2_pwjao"]
@@ -18,6 +18,24 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyeam"]
+
 [node name="ArrowLeftButton" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_umpa8")
 script = ExtResource("3_vevw5")
+
+[node name="PerfectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectArea"]
+shape = SubResource("RectangleShape2D_pyeam")
+
+[node name="GoodArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea"]
+scale = Vector2(1, 2.68)
+shape = SubResource("RectangleShape2D_pyeam")
+
+[connection signal="area_entered" from="PerfectArea" to="." method="_on_PerfectArea_area_entered"]
+[connection signal="area_exited" from="PerfectArea" to="." method="_on_PerfectArea_area_exited"]
+[connection signal="area_entered" from="GoodArea" to="." method="_on_GoodArea_area_entered"]
+[connection signal="area_exited" from="GoodArea" to="." method="_on_GoodArea_area_exited"]

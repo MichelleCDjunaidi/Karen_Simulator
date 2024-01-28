@@ -1,5 +1,6 @@
-extends AnimatedSprite2D
-@export var speed = 150
+extends Area2D
+
+@export var speed = 600
 var HUDNode
 
 # Called when the node enters the scene tree for the first time.
@@ -17,4 +18,8 @@ func _process(delta):
 # destroying 
 		queue_free()
 	pass
+	
+func hit():
+	$AnimatedSprite2D.visible = false
+	$Hand.visible = true #placeholder, play animation basically 
 
